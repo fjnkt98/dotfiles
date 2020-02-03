@@ -32,3 +32,4 @@ endif
 
 "source ~/vimfiles/plugins/solarized.vim
 source ~/vimfiles/plugins/tender.vim
+source ~/vimfiles/plugins/vim-lsp.vim
