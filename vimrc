@@ -5,10 +5,10 @@ set clipboard^=unnamedplus " クリップボードを使う
 set nohls      " 検索時のハイライトを消す
 
 " 分割画面時の画面遷移設定
-noremap <slient><C-h> <C-w>h
-noremap <slient><C-j> <C-w>j
-noremap <slient><C-k> <C-w>k
-noremap <slient><C-l> <C-w>l
+noremap <silent><C-h> <C-w>h
+noremap <silent><C-j> <C-w>j
+noremap <silent><C-k> <C-w>k
+noremap <silent><C-l> <C-w>l
 
 " vi互換を使用しない
 if &compatible
@@ -61,3 +61,7 @@ call plug#end()
 
 " プラグインの設定ファイル読み込み
 source ~/dotfiles/config/tender.vim
+source ~/dotfiles/config/lexima.vim
+source ~/dotfiles/config/nerdtree.vim
+source ~/dotfiles/config/nerdtree-git-plugin.vim
+source ~/dotfiles/config/vim-gitgutter.vim
