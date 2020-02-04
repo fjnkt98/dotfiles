@@ -1,2 +1,2 @@
 #!/bin/sh
-ln -sf ~/vimfiles/vimrc ~/.vimrc
+ln -sf ~/dotfiles/vimrc ~/.vimrc

@@ -48,4 +48,4 @@ Plug 'mattn/vim-lsp-icons'
 "Plug 'hrsh7th/vim-vsnip-integ'
 call plug#end()
 
-source ~/vimfiles/config/tender.vim
+source ~/dotfiles/config/tender.vim
