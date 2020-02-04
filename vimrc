@@ -30,6 +30,22 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-"source ~/vimfiles/plugins/solarized.vim
-source ~/vimfiles/plugins/tender.vim
-source ~/vimfiles/plugins/vim-lsp.vim
+if $HOME!=$USERPROFILE && $GIT_EXEC_PATH!=""
+  finish
+end
+
+call plug#begin()
+Plug 'jacoborus/tender.vim'
+
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-lsp-icons'
+
+"Plug 'hrsh7th/vim-vsnip'
+"Plug 'hrsh7th/vim-vsnip-integ'
+call plug#end()
+
+source ~/vimfiles/config/tender.vim
