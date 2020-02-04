@@ -10,8 +10,10 @@ noremap <slient><C-j> <C-w>j
 noremap <slient><C-k> <C-w>k
 noremap <slient><C-l> <C-w>l
 
-filetype plugin indent on
-syntax enable
+" vi互換を使用しない
+if &compatible
+  set nocompatible
+endif
 
 set autoindent     " オートインデントをオン
 set smartindent    " スマートインデントをオン
@@ -30,10 +32,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" git commit時はプラグインを読み込まない
 if $HOME!=$USERPROFILE && $GIT_EXEC_PATH!=""
   finish
 end
 
+" プラグインの読み込み
 call plug#begin()
 Plug 'jacoborus/tender.vim'
 
@@ -43,9 +47,17 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/vim-lsp-icons'
-
 "Plug 'hrsh7th/vim-vsnip'
 "Plug 'hrsh7th/vim-vsnip-integ'
+
+Plug 'cohama/lexima.vim'
+
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
+" プラグインの設定ファイル読み込み
 source ~/dotfiles/config/tender.vim
