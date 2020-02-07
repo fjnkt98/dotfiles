@@ -72,8 +72,22 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Load settings for each plugin
-source ~/dotfiles/config/tender.vim
-source ~/dotfiles/config/lexima.vim
-source ~/dotfiles/config/nerdtree.vim
-source ~/dotfiles/config/nerdtree-git-plugin.vim
-source ~/dotfiles/config/vim-gitgutter.vim
+if s:is_plugged("tender.vim")
+  source ~/dotfiles/config/tender.vim
+endif
+
+if s:is_plugged("lexima.vim")
+  source ~/dotfiles/config/lexima.vim
+endif
+
+if s:is_plugged("nerdtree.vim")
+  source ~/dotfiles/config/nerdtree.vim
+endif
+
+if s:is_plugged("nerdtree-git-plugin.vim")
+  source ~/dotfiles/config/nerdtree-git-plugin.vim
+endif
+
+if s:is_plugged("vim-gitgutter.vim")
+  source ~/dotfiles/config/vim-gitgutter.vim
+endif
