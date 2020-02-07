@@ -1,4 +1,4 @@
-# vimfiles
+# dotfiles
 Vim configuration files
 
 ## Usage
