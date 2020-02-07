@@ -80,7 +80,7 @@ if s:is_plugged("lexima.vim")
   source ~/dotfiles/config/lexima.vim
 endif
 
-if s:is_plugged("nerdtree.vim")
+if s:is_plugged("nerdtree")
   source ~/dotfiles/config/nerdtree.vim
 endif
 
