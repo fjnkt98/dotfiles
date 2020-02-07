@@ -1,43 +1,55 @@
-set number     " 行数を表示
-set splitright " 新しいウィンドウを右側に開く
-set clipboard&
-set clipboard^=unnamedplus " クリップボードを使う
-set nohls      " 検索時のハイライトを消す
+set encoding=utf-8
+scriptencoding utf-8
 
-" 分割画面時の画面遷移設定
+set number     " Display row number
+set splitright " Open new window to right
+set clipboard&
+set clipboard^=unnamedplus " Use clipboard
+set nohls      " No highlight when searching
+
+" View movement settings in split view
 noremap <silent><C-h> <C-w>h
 noremap <silent><C-j> <C-w>j
 noremap <silent><C-k> <C-w>k
 noremap <silent><C-l> <C-w>l
 
-" vi互換を使用しない
+" No use vi-compatible
 if &compatible
   set nocompatible
 endif
 
-set autoindent     " オートインデントをオン
-set smartindent    " スマートインデントをオン
-set softtabstop=2  " タブキーで2つスペースを追加
-set tabstop=2      " スペース2つで1つのタブとしてカウント
-set expandtab      " タブ文字を使わない
-set shiftwidth=2   " 自動挿入されるスペースは2つ分
+set autoindent     " Auto indent
+set smartindent    " Smart indent
+set softtabstop=2  " Insert 2 spaces with Tab key
+set tabstop=2      " 1 indent with 2 spaces
+set expandtab      " Never use Tab-character
+set shiftwidth=2   " 2 spaces automatically inserted
 
-" Pythonを使うときだけスペース4つでインデント
+" Indent with 4 spaces only when edit Python
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
-" vim-plugの自動インストール
+" Auto install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" git commit時はプラグインを読み込まない
+" Not loading plugins when run 'git commit'
 if $HOME!=$USERPROFILE && $GIT_EXEC_PATH!=""
   finish
 end
 
-" プラグインの読み込み
+" Check the specified plugin is installed
+function s:is_plugged(name)
+    if exists('g:plugs') && has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir)
+        return 1
+    else
+        return 0
+    endif
+endfunction
+
+" Load plugins
 call plug#begin()
 Plug 'jacoborus/tender.vim'
 
@@ -59,7 +71,7 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
-" プラグインの設定ファイル読み込み
+" Load settings for each plugin
 source ~/dotfiles/config/tender.vim
 source ~/dotfiles/config/lexima.vim
 source ~/dotfiles/config/nerdtree.vim
