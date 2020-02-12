@@ -69,25 +69,32 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " Load settings for each plugin
 if s:is_plugged("tender.vim")
-  source ~/dotfiles/config/tender.vim
+  source ~/dotfiles/config/tender.vim.conf
 endif
 
 if s:is_plugged("lexima.vim")
-  source ~/dotfiles/config/lexima.vim
+  source ~/dotfiles/config/lexima.vim.conf
 endif
 
 if s:is_plugged("nerdtree")
-  source ~/dotfiles/config/nerdtree.vim
+  source ~/dotfiles/config/nerdtree.conf
 endif
 
 if s:is_plugged("nerdtree-git-plugin.vim")
-  source ~/dotfiles/config/nerdtree-git-plugin.vim
+  source ~/dotfiles/config/nerdtree-git-plugin.vim.conf
 endif
 
 if s:is_plugged("vim-gitgutter.vim")
-  source ~/dotfiles/config/vim-gitgutter.vim
+  source ~/dotfiles/config/vim-gitgutter.vim.conf
 endif
