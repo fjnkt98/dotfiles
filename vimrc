@@ -98,3 +98,7 @@ endif
 if s:is_plugged("vim-gitgutter.vim")
   source ~/dotfiles/config/vim-gitgutter.vim.conf
 endif
+
+if s:is_plugged("vim-lsp")
+  source ~/dotfiles/config/vim-lsp.conf
+endif
