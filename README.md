@@ -1,11 +1,14 @@
 # dotfiles
-Vim configuration files
+
+自分用のVimコンフィグリポジトリ
 
 ## Usage
 
-Only Linux
+Ubuntu 18.04LTSでのみ動作確認済み
 
 ### Install Vim
+
+Vimをインストールする．UbuntuにデフォルトでインストールされているVimはtinyなものなのでフルバージョンをインストールする．
 
 ```
 $ sudo apt update
@@ -13,6 +16,8 @@ $ sudo apt install vim
 ```
 
 ### Clone This Repository
+
+このリポジトリをホームディレクトリにクローンする．
 
 ```
 $ cd ~/
@@ -23,7 +28,7 @@ $ git clone https://github.com/fjnkt98/dotfiles.git # Use HTTPS
 
 ### Add Symbolic-Link
 
-Run `link.sh`
+`.vimrc`をシンボリックリンクで作成する．リポジトリ内の`link.sh`を実行することでシンボリックリンクを作成することが出来る．
 
 ```
 $ cd ~/dotfiles
@@ -32,13 +37,15 @@ $ sh ./link.sh
 
 ### Launch Vim
 
+Vimを実行してみる．
+
 ```
 $ vim
 ```
 
 ### Install Plugins
 
-In Vim terminal, run follow command.
+Vimを実行し，セミコロンを押してコマンドモードにして`PlugInstall`を実行する．
 
 ```
 :PlugInstall
