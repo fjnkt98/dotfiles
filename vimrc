@@ -8,10 +8,10 @@ set clipboard^=unnamedplus " Use clipboard
 set nohls      " No highlight when searching
 
 " View movement settings in split view
-noremap <silent><C-h> <C-w>h
-noremap <silent><C-j> <C-w>j
-noremap <silent><C-k> <C-w>k
-noremap <silent><C-l> <C-w>l
+"nnoremap <silent><C-h> <C-w>h
+"nnoremap <silent><C-j> <C-w>j
+"nnoremap <silent><C-k> <C-w>k
+"nnoremap <silent><C-l> <C-w>l
 
 " No use vi-compatible
 if &compatible
