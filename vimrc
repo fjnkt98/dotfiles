@@ -28,6 +28,9 @@ set shiftwidth=2   " 2 spaces automatically inserted
 " Indent with 4 spaces only when edit Python
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
+" Turn on syntax highlighting in .launch file
+autocmd BufEnter *.launch :setlocal filetype=xml
+
 " Auto install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
