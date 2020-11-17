@@ -6,6 +6,7 @@ set splitright " Open new window to right
 set clipboard&
 set clipboard^=unnamedplus " Use clipboard
 set nohls      " No highlight when searching
+set nowrap
 
 " View movement settings in split view
 nnoremap <silent><C-h> <C-w>h
