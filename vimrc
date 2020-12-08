@@ -26,6 +26,11 @@ set tabstop=2      " 1 indent with 2 spaces
 set expandtab      " Never use Tab-character
 set shiftwidth=2   " 2 spaces automatically inserted
 
+" To avoid wrong background rendering on WSL 
+if (&term =~ '^xterm' && &t_Co == 256)
+  set t_ut= | set ttyscroll=1
+endif
+
 " Indent with 4 spaces only when edit Python
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
