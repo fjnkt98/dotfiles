@@ -26,7 +26,7 @@ set tabstop=2      " 1 indent with 2 spaces
 set expandtab      " Never use Tab-character
 set shiftwidth=2   " 2 spaces automatically inserted
 
-" To avoid wrong background rendering on WSL 
+" To avoid wrong background rendering on WSL
 if (&term =~ '^xterm' && &t_Co == 256)
   set t_ut= | set ttyscroll=1
 endif
@@ -73,8 +73,8 @@ Plug 'mattn/vim-lsp-icons'
 
 Plug 'cohama/lexima.vim'
 
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
@@ -93,12 +93,8 @@ if s:is_plugged("lexima.vim")
   source ~/dotfiles/config/lexima.vim.conf
 endif
 
-if s:is_plugged("nerdtree")
-  source ~/dotfiles/config/nerdtree.conf
-endif
-
-if s:is_plugged("nerdtree-git-plugin.vim")
-  source ~/dotfiles/config/nerdtree-git-plugin.vim.conf
+if s:is_plugged("fern.vim")
+  source ~/dotfiles/config/fern.vim.conf
 endif
 
 if s:is_plugged("vim-gitgutter.vim")
