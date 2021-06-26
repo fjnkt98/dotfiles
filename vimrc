@@ -68,8 +68,8 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/vim-lsp-icons'
-"Plug 'hrsh7th/vim-vsnip'
-"Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 Plug 'cohama/lexima.vim'
 
@@ -103,4 +103,8 @@ endif
 
 if s:is_plugged("vim-lsp")
   source ~/dotfiles/config/vim-lsp.conf
+endif
+
+if s:is_plugged("vim-vsnip")
+  source ~/dotfiles/config/vim-vsnip.conf
 endif
