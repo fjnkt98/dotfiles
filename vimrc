@@ -49,6 +49,10 @@ if $HOME!=$USERPROFILE && $GIT_EXEC_PATH!=""
   finish
 end
 
+" Load termdebug plugin
+packadd termdebug
+let g:termdebug_wide = 160
+
 " Check the specified plugin is installed
 function s:is_plugged(name)
     if exists('g:plugs') && has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir)
@@ -70,6 +74,8 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'mattn/vim-lsp-icons'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+
+Plug 'mattn/emmet-vim'
 
 Plug 'cohama/lexima.vim'
 
