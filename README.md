@@ -3,5 +3,5 @@
 ## tmux
 
 ```sh
-ln -s tmux/tmux.conf ~/.config/.tmux.conf
+ln -s $(pwd)/tmux/tmux.conf ~/.config/tmux/.tmux.conf
 ```
