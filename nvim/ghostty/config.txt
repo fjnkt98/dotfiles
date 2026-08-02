@@ -1,0 +1,7 @@
+shell-integration-features = no-cursor
+
+cursor-opacity = 0.7
+cursor-style = block
+cursor-style-blink = false
+
+font-feature = -dlig
