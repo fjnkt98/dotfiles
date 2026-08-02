@@ -92,25 +92,25 @@ call plug#end()
 
 " Load settings for each plugin
 if s:is_plugged("tender.vim")
-  source ~/dotfiles/config/tender.vim.conf
+  source ~/dotfiles/vim/config/tender.vim.conf
 endif
 
 if s:is_plugged("lexima.vim")
-  source ~/dotfiles/config/lexima.vim.conf
+  source ~/dotfiles/vim/config/lexima.vim.conf
 endif
 
 if s:is_plugged("fern.vim")
-  source ~/dotfiles/config/fern.vim.conf
+  source ~/dotfiles/vim/config/fern.vim.conf
 endif
 
 if s:is_plugged("vim-gitgutter.vim")
-  source ~/dotfiles/config/vim-gitgutter.vim.conf
+  source ~/dotfiles/vim/config/vim-gitgutter.vim.conf
 endif
 
 if s:is_plugged("vim-lsp")
-  source ~/dotfiles/config/vim-lsp.conf
+  source ~/dotfiles/vim/config/vim-lsp.conf
 endif
 
 if s:is_plugged("vim-vsnip")
-  source ~/dotfiles/config/vim-vsnip.conf
+  source ~/dotfiles/vim/config/vim-vsnip.conf
 endif
